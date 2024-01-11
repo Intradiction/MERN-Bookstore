@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import { PORT, mongoDBURL } from "./config.js";
@@ -19,6 +19,11 @@ app.use(
 ));
 
 app.use('/books', booksRoute);
+
+// Default route, if people visit backend url in browser
+app.get('/', (request, response) => {
+  response.status(200).send('Backend for MERN tutorial bookstore');
+});
 
 // Connect to MongoDB, then if connection successful, start express server
 mongoose
