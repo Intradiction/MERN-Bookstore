@@ -23,7 +23,7 @@ app.use('/books', booksRoute);
 
 // Default route, if people visit backend url in browser
 app.get('/', (request, response) => {
-  response.status(200).send('Backend for MERN tutorial bookstore');
+  response.status(200).send('Backend for MERN bookstore');
 });
 
 // Connect to MongoDB, then if connection successful, start express server
