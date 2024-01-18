@@ -18,11 +18,8 @@ const Home = () => {
     axios
       .get('http://localhost:5555/books')
       .then((response) => {
-        console.log(response.data.data)
         setText(response.data.data[0].author)
         setBooks(response.data.data);
-        console.log(books);
-        
         setLoading(false);
       })
       .catch((error) => {
