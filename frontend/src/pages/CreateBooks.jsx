@@ -27,7 +27,7 @@ const CreateBooks = () => {
       .catch((error) => {
         console.error(error);
         setLoading(false);
-        alert('An error has occurred while saving the book. Please check console logs');
+        alert('An error has occurred while saving the book. Please check console logs.');
       });
   };
 
