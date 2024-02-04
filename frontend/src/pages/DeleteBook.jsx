@@ -11,7 +11,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://https://mern-bookstore-backend-phi.vercel.app//books/${id}`)
+      .delete(`https://mern-bookstore-backend-phi.vercel.app/books/${id}`)
       .then(() => {
         setLoading(false);
         navigate('/');
