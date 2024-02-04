@@ -13,10 +13,10 @@ app.use(express.json());
 app.use(
   //cors()
   cors({
-    origin: ['https://mern-bookstore-frontend-eight.vercel.app'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-    //allowedHeaders: ['Content-Type'],
+    origin: '*', //['https://mern-bookstore-frontend-eight.vercel.app']
+    methods: '*', //['GET', 'POST', 'PUT', 'DELETE']
+    allowedHeaders: ['Content-Type'],
+    credentials: true,
   })
 );
 
