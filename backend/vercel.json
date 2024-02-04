@@ -6,11 +6,7 @@
     "routes": [
         {
           "src": "/(.*)",
-          "dest": "/",
-          "headers": {
-            "Access-Control-Allow-Origin": "https://mern-bookstore-frontend-eight.vercel.app",
-            "Access-Control-Allow-Credentials": "true"
-          }
+          "dest": "/"
         }
     ]
   }
