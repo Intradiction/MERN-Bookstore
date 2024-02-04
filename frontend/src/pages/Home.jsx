@@ -13,6 +13,7 @@ const Home = () => {
 
   const [text, setText] = useState('aweta');
 
+  axios.defaults.withCredentials = true;
   // On component laod, get books data from backend and handle loading state
   useEffect(() => {
     axios
