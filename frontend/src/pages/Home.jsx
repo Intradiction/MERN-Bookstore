@@ -16,7 +16,7 @@ const Home = () => {
   // On component laod, get books data from backend and handle loading state
   useEffect(() => {
     axios
-      .get('http://localhost:5555/books')
+      .get('http://https://mern-bookstore-backend-phi.vercel.app//books')
       .then((response) => {
         setText(response.data.data[0].author)
         setBooks(response.data.data);
