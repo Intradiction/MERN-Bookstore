@@ -30,6 +30,9 @@ router.get('/', async(request, response) => {
   try {
     const books = await Book.find({});
 
+    res.set("Access-Control-Allow-Origin", "https://mern-bookstore-frontend-eight.vercel.app");
+    res.set('Access-Control-Allow-Credentials', true);
+
     return response.status(200).json({
       count: books.length,
       data: books,
