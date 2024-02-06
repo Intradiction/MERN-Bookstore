@@ -15,7 +15,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "https://mern-bookstore-frontend-eight.vercel.app, https://localhost"
+                    "value": "https://mern-bookstore-frontend-eight.vercel.app"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
