@@ -30,8 +30,8 @@ router.get('/', async(request, response) => {
   try {
     const books = await Book.find({});
 
-    response.set("Access-Control-Allow-Origin", "https://mern-bookstore-frontend-eight.vercel.app");
-    response.set('Access-Control-Allow-Credentials', true);
+    // response.set("Access-Control-Allow-Origin", "https://mern-bookstore-frontend-eight.vercel.app");
+    // response.set('Access-Control-Allow-Credentials', true);
 
     return response.status(200).json({
       count: books.length,
@@ -70,6 +70,9 @@ router.put('/:id', async(request, response) => {
     const { id } = request.params;
 
     const book = await Book.findByIdAndUpdate(id, request.body);
+
+    response.set("Access-Control-Allow-Origin", "https://mern-bookstore-frontend-eight.vercel.app");
+    response.set('Access-Control-Allow-Credentials', true);
 
     if(!book) {
       return response.status(404).json({ message: 'Book not found'});
