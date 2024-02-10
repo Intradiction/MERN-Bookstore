@@ -30,7 +30,7 @@ app.get('/', (request, response) => {
 
 // if you visit the backend url in a browser, it'll try to get the icon for the tab , tell em no - there's no icon here buddy
 app.get('/favicon.ico', (request, response) => {
-  res.status(204).end();  // 204 no content
+  response.status(204).end();  // 204 no content
 });
 
 
